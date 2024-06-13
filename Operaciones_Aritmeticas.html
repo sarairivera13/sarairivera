@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Aritméticas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="COA">
+        <div class="title_Coa">
+            <br><br><br><br>
+            <h1>Operaciones Aritméticas</h1>
+        </div>
+    </div>
+    <div class="cuerpo_COA">
+        <div class="tcoa">
+            <br><br>
+            <h1>Selecciona una operación</h1>
+        </div>
+        <br><br><br>
+        <div class="opciones">
+            <div class="sumas">
+                <br><br>
+                    <button onclick="mostrar_suma()" class="opc1" > SUMA </button>  
+            </div>
+            <div class="restas">
+                <br><br>
+                <button onclick="mostrar_resta()" class="opc2">RESTA</button>
+                
+            </div>
+            <div class="multiplicacion">
+                <br><br>
+                <button onclick="mostrar_multiplicacion()" class="opc3"> MULTIPLICACION</button>
+            </div>
+            <div class="division">
+                <br><br>
+                <button onclick="mostrar_division()" class="opc4">DIVISION</button>
+            </div>
+        </div>
+        <div id="operaciones" class="operaciones">
+            <center>
+                <div class="OA">
+                    <div class="o">
+                        <h1 class="op_suma">SUMAS</h1>
+                    </div>
+                    <div class="oa">
+                        <img class="img_suma" src="matematicas/suma.jpg" alt="">
+                    </div>
+                    <div class="txt_num1">
+                        <h1>Ingresa un número</h1>
+                    </div>
+                    <div class="txt_gnum1">
+                        <input id="num1_s" class="num1suma" type="number">
+                    </div>
+                    <div class="txt_num1">
+                        <h1>Ingresa otro número</h1>
+                    </div>
+                    <div class="txt_gnum1">
+                        <input id="num2_s" class="num2suma" type="number">
+                    </div>
+                    <div class="calcular_suma">
+                        <button  onclick="suma()" class="btn_c_suma"> Calcular</button>
+                    </div>
+                    <div class="Resultado_suma">
+                        <h1>Resultado</h1>
+                    </div>
+                    <div class="txt_gnum1">
+                        <input id="resultado_suma" class="num2suma" type="number">
+                    </div>
+                </div>
+            </center>         
+        </div> 
+        <div id="operaciones2" class="operaciones2">
+            <center>
+                <div class="OA2">
+                    <div class="o2">
+                        <h1 class="op_resta">RESTAS</h1>
+                    </div>
+                    <div class="oa2">
+                        <img class="img_resta" src="matematicas/Resta.png" alt="">
+                    </div>
+                    <div class="txt_num1_resta">
+                        <h1>Ingresa un número</h1>
+                    </div>
+                    <div class="txt_gnum1_resta">
+                        <input id="num1_r" class="num1_resta" type="number">
+                    </div>
+                    <div class="txt_num1_resta">
+                        <h1>Ingresa otro número</h1>
+                    </div>
+                    <div class="txt_gnum1_resta">
+                        <input id="num2_r" class="num2_resta" type="number">
+                    </div>
+                    <div class="calcular_resta">
+                        <button  onclick="resta()" class="btn_c_resta"> Calcular</button>
+                    </div>
+                    <div class="Resultado_resta">
+                        <h1>Resultado</h1>
+                    </div>
+                    <div class="txt_gnum1_resta">
+                        <input id="resultado_resta" class="num2_resta" type="number">
+                    </div>
+                </div>
+            </center>         
+        </div>
+        <!-- multiplicacion -->
+        <div id="operaciones3" class="operaciones3">
+            <center>
+                <div class="OA3">
+                    <div class="o3">
+                        <h1 class="op_multiplicacion">MULTIPLICACIONES</h1>
+                    </div>
+                    <div class="oa3">
+                        <img class="img_multiplicacion" src="matematicas/multiplicacion.png" alt="">
+                    </div>
+                    <div class="txt_num1_multiplicacion">
+                        <h1>Ingresa un número</h1>
+                    </div>
+                    <div class="txt_gnum1_multiplicacion">
+                        <input id="num1_m" class="num1_multiplicacion" type="number">
+                    </div>
+                    <div class="txt_num1_multiplicacion">
+                        <h1>Ingresa otro número</h1>
+                    </div>
+                    <div class="txt_gnum1_multiplicacion">
+                        <input id="num2_m" class="num2_multiplicacion" type="number">
+                    </div>
+                    <div class="calcular_multiplicacion">
+                        <button  onclick="multiplicacion()" class="btn_c_multiplicacion"> Calcular</button>
+                    </div>
+                    <div class="Resultado_multiplicacion">
+                        <h1>Resultado</h1>
+                    </div>
+                    <div class="txt_gnum1_multiplicacion">
+                        <input id="resultado_multiplicacion" class="num2_multiplicacion" type="number">
+                    </div>
+                </div>
+            </center>         
+        </div>
+        <!-- division -->
+        <div id="operaciones4" class="operaciones4">
+            <center>
+                <div class="OA4">
+                    <div class="o4">
+                        <h1 class="op_division">DIVISION</h1>
+                    </div>
+                    <div class="oa4">
+                        <img class="img_division" src="matematicas/division.png" alt="">
+                    </div>
+                    <div class="txt_num1_division">
+                        <h1>Ingresa un número</h1>
+                    </div>
+                    <div class="txt_gnum1_division">
+                        <input id="num1_d" class="num1_division" type="number">
+                    </div>
+                    <div class="txt_num1_division">
+                        <h1>Ingresa otro número</h1>
+                    </div>
+                    <div class="txt_gnum1_division">
+                        <input id="num2_d" class="num2_division" type="number">
+                    </div>
+                    <div class="calcular_division">
+                        <button  onclick="division()" class="btn_c_division"> Calcular</button>
+                    </div>
+                    <div class="Resultado_division">
+                        <h1>Resultado</h1>
+                    </div>
+                    <div class="txt_gnum1_division">
+                        <input id="resultado_division" class="num2_division" type="number">
+                    </div>
+                </div>
+            </center>         
+        </div>
+    </div>
+    <div class="Regresar">
+        <a class="br" href="problemas_matematicos.html">Regresar</a>
+    </div>
+    
+    <script>
+        function suma(){
+            var n1 = document.getElementById('num1_s').value;
+            var n2 = document.getElementById('num2_s').value;
+
+            var num_c1 = parseFloat(n1);
+            var num_c2 = parseFloat(n2);
+            var rs = num_c1 + num_c2;
+            document.getElementById('resultado_suma').value = rs;
+        }
+        function resta(){
+            var n1 = document.getElementById('num1_r').value;
+            var n2 = document.getElementById('num2_r').value;
+
+            var num_c1 = parseFloat(n1);
+            var num_c2 = parseFloat(n2);
+            var rr = num_c1 - num_c2;
+            document.getElementById('resultado_resta').value = rr;
+        }
+        function multiplicacion(){
+            var n1 = document.getElementById('num1_m').value;
+            var n2 = document.getElementById('num2_m').value;
+            var num_c1 = parseFloat(n1);
+            var num_c2 = parseFloat(n2);
+            var rm = num_c1 * num_c2;
+            document.getElementById('resultado_multiplicacion').value = rm;
+        }
+        function division(){
+            var n1 = document.getElementById('num1_d').value;
+            var n2 = document.getElementById('num2_d').value;
+            var num_c1 = parseFloat(n1);
+            var num_c2 = parseFloat(n2);
+            var rd = num_c1 / num_c2;
+            document.getElementById('resultado_division').value = rd;
+        }
+        function mostrar_suma(){
+            document.getElementById('operaciones').style.display = "block";
+            document.getElementById('operaciones2').style.display = "none";
+            document.getElementById('operaciones3').style.display = "none";
+            document.getElementById('operaciones4').style.display = "none";
+            
+        }
+        function mostrar_resta(){
+            document.getElementById('operaciones2').style.display = "block";
+            document.getElementById('operaciones').style.display = "none";
+            document.getElementById('operaciones3').style.display = "none";
+            document.getElementById('operaciones4').style.display = "none";
+        }
+        function mostrar_multiplicacion(){
+            document.getElementById('operaciones').style.display = "none";
+            document.getElementById('operaciones2').style.display = "none";
+            document.getElementById('operaciones3').style.display = "block";
+            document.getElementById('operaciones4').style.display = "none";
+            
+        }
+        function mostrar_division(){
+            document.getElementById('operaciones').style.display = "none";
+            document.getElementById('operaciones2').style.display = "none";
+            document.getElementById('operaciones3').style.display = "none";
+            document.getElementById('operaciones4').style.display = "block";
+        }
+
+    </script>
+</body>
+</html>

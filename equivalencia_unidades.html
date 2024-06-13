@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equivalencia de Unidades</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="cabecera_unidades">
+        <div class="titulo_unidades">
+            <h1>Equivalencia de unidades</h1>
+        </div>
+    </div>
+    <div class="cuerpo_unidades">
+        <br>
+        <div class="titulo_equivalencias">
+            <h1>Selecciona una opción</h1>
+        </div>
+        <div class="opciones_equivalencias">
+            <div class="opc_e">
+                <div class="km_m">
+                    <button onclick="mostrarkm()" id="btn_km" class="btn_km">KM A M</button>
+                </div>
+                <div class="cm_m">
+                    <button onclick="mostrarcm()" id="btn_cm" class="btn_cm">CM A M</button>
+                </div>
+                <div class="l_ml">
+                    <button onclick="mostrarL()" id="btn_l" class="btn_l">L A ML</button>
+                </div>
+                <div class="y_p">
+                    <button onclick="mostrary()" id="btn_y" class="btn_y">Y A P</button>
+                </div>
+            </div>  
+        </div>
+     
+        <div class="operaciones_equivalencias">
+            <div id="ope" class="ope">
+                <h1>Ingresa los Kilometros</h1>
+                <br>
+                <input class="km" id="km" type="number">
+                <div class="btn_c_km">
+                    <button onclick="km()" id="c_km" class="c_km">CALCULAR</button>
+                </div>
+                <h1>Es equivalente a:</h1>
+                <br>
+                <input class="km" id="cm" type="number">
+                <h1>cm</h1>
+            </div>
+            <!-- cm -->
+            <div id="ope2" class="ope2">
+                <h1>Ingresa los Centimetros</h1>
+                <br>
+                <input class="cm" id="cm2" type="number">
+                <div class="btn_c_cm">
+                    <button onclick="cm()" id="c_cm" class="c_cm">CALCULAR</button>
+                </div>
+                <h1>Es equivalente a:</h1>
+                <br>
+                <input class="cm" id="m" type="number">
+                <h1>Metros</h1>
+            </div>
+            <!-- litros -->
+            <div id="ope3" class="ope3">
+                <h1>Ingresa los Litros</h1>
+                <br>
+                <input class="lt" id="lt2" type="number">
+                <div class="btn_c_l">
+                    <button onclick="L()" id="c_l" class="c_l">CALCULAR</button>
+                </div>
+                <h1>Es equivalente a:</h1>
+                <br>
+                <input class="lt" id="l" type="number">
+                <h1>mililitros</h1>
+            </div>
+            <!-- yardas -->
+            <div id="ope4" class="ope4">
+                <h1>Ingresa las yardas</h1>
+                <br>
+                <input class="yp" id="yp2" type="number">
+                <div class="btn_c_y">
+                    <button onclick="y()" id="c_y" class="c_y">CALCULAR</button>
+                </div>
+                <h1>Es equivalente a:</h1>
+                <br>
+                <input class="yp" id="y" type="number">
+                <h1>pies</h1>
+            </div>
+        </div>
+        <div class="r_o">
+            <a class="c_l" href="problemas_matematicos.html">REGRESAR</a>
+        </div>
+    </div>
+    <script>
+        function y(){
+            var y1 = document.getElementById('yp2').value;
+            var c_y1 = parseFloat(y1);
+            var y = c_y1 *3;
+            document.getElementById('y').value = y;
+        }
+        function km(){
+            var km1 = document.getElementById('km').value;
+            var c_km1 = parseFloat(km1);
+            var cm = c_km1 *1000;
+            document.getElementById('cm').value = cm;
+        }
+        function mostrarkm(){
+            document.getElementById('ope').style.display = "block";
+            document.getElementById('ope2').style.display = "none";
+            document.getElementById('ope3').style.display = "none";
+            document.getElementById('ope4').style.display = "none";
+        }
+        function mostrary(){
+            document.getElementById('ope').style.display = "none";
+            document.getElementById('ope2').style.display = "none";
+            document.getElementById('ope3').style.display = "none";
+            document.getElementById('ope4').style.display = "block";
+        }
+        function mostrarcm(){
+            document.getElementById('ope').style.display = "none";
+            document.getElementById('ope2').style.display = "block";
+            document.getElementById('ope3').style.display = "none";
+            document.getElementById('ope4').style.display = "none";
+        }
+        function mostrarL(){
+            document.getElementById('ope').style.display = "none";
+            document.getElementById('ope2').style.display = "none";
+            document.getElementById('ope4').style.display = "none";
+            document.getElementById('ope3').style.display = "block";
+        }
+        function cm(){
+            var cm1 = document.getElementById('cm2').value;
+            var c_cm1 = parseFloat(cm1);
+            var m = c_cm1 /100;
+            document.getElementById('m').value = m;
+        }
+        function L(){
+            var l1 = document.getElementById('lt2').value;
+            var c_l1 = parseFloat(l1);
+            var l = c_l1 *1000;
+            document.getElementById('l').value = l;
+        }
+    </script>
+</body>
+</html>

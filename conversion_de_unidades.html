@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversión de unidades</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="cabecera_conversiones">
+        <div class="titulo_conversiones">
+            <h1>Conversión de unidades</h1>
+        </div>
+    </div>
+    <div class="cuerpo_conversiones">
+        <br><br>
+        <div class="tc">
+            <h1>Selecciona una opción</h1>
+        </div>
+        <div class="opciones_conversiones">
+            <div class="grados">
+                <br><br>
+                    <button onclick="mostrar_grados()" class="btn_grados" > GRADOS</button>  
+            </div>
+            <div class="radianes">
+                <br><br>
+                <button onclick="mostrar_radianes()" class="btn_radianes">RADIANES</button>
+                
+            </div>
+        </div>
+        <div class="operaciones_grados">
+            <div id="opg1" class="opg">
+                <br>
+                <h1>Ingresa los grados</h1><br>
+                <input id="num1_g" class="NG" type="number">
+                <div class="div_btn1">
+                    <br>
+                    <button onclick="grados_a_radianes()" class="calcular_grados">Calcular</button>
+                </div>
+                <h1>Son:</h1><br>
+                <input id="resultado_grados" class="resultado_grados" type="number">
+                <h1>radianes</h1><br>
+            </div>
+            <div id="opr1" class="opr">
+                <br>
+                <h1>Ingresa los radianes</h1><br>
+                <input id="num1_r" class="NR" type="number">
+                <div class="div_btn2">
+                    <br>
+                    <button onclick="radianes_grados()" class="calcular_radianes">Calcular</button>
+                </div>
+                <h1>Son:</h1><br>
+                <input id="resultado_radianes" class="resultado_radianes" type="number">
+                <h1>grados</h1><br>
+            </div>
+        </div>
+        <div>
+            <div class="regresar_conversiones">
+                <a class="regresar_c" href="problemas_matematicos.html">REGRESAR</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function grados_a_radianes(){
+            var n1 = document.getElementById('num1_g').value;
+            var grados = parseFloat(n1);
+            var rg = grados * 3.1416/180;
+            document.getElementById('resultado_grados').value = rg;
+        }
+        function radianes_grados(){
+            var n1 = document.getElementById('num1_r').value;
+            var radianes = parseFloat(n1);
+            var r = radianes * 180/3.1416;
+            document.getElementById('resultado_radianes').value = r;
+        }
+        function mostrar_grados(){
+            document.getElementById('opg1').style.display = 'block';
+            document.getElementById('opr1').style.display = 'none';
+        }
+        function mostrar_radianes(){
+            document.getElementById('opg1').style.display = 'none';
+            document.getElementById('opr1').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

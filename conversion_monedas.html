@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de monedas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="cabecera_monedas">
+        <div class="titulo_monedas">
+            <h1>Conversión de monedas</h1>
+        </div>
+    </div>
+    <div class="cuerpo_monedas">
+        <div class="titulo_opciones">
+            <h1>Moneda: Peso Mexicano</h1>
+        </div>
+        <div class="img_monedas">
+            <img class="peso a" src="monedas/monedas.jpg" alt="">
+        </div>
+        <div class="operaciones_monedas">
+            <div class="conversiones_monedas">
+                <div class="e_mo">
+                    <h1>Ingresa una cantidad en pesos mexicanos:</h1>
+                </div>
+                <div class="div_num_mo1">
+                    <input class="num1_monedas" id="num1_monedas" type="number">
+                </div>
+            </div>
+            <div class="opc_mo">
+                <h1>Selecciona una equivalencia</h1>
+            </div>
+            <div class="btn_monedas">
+                <div class="btn_libras">
+                    <button onclick="libras()" id="libras" class="boton_libras">LIBRAS</button>
+                </div>
+                <div class="btn_dolares">
+                    <button onclick="dolares()" class="boton_dolares">DOLARES</button>
+                </div>
+                <div class="btn_euro">
+                    <button onclick="euros()" class="boton_euros">EUROS</button>
+                </div>
+                <div class="btn_yenes">
+                    <button onclick="yenes()" class="boton_yenes">YENES</button>
+                </div>
+            </div>
+             <div class="e_mo">
+                    <h1>Su equivalencia es igual a:</h1>
+                </div>
+                <div class="div_num_mo1">
+                    <input class="num2_monedas" id="num2_monedas" type="number">
+                </div>
+                <div class="btn_regresar_monedas">
+                    <a class="r_monedas" href="problemas_matematicos.html">REGRESAR</a>
+                </div>
+        </div>
+    </div>
+
+    <script>
+    function libras(){
+        var n1 = document.getElementById('num1_monedas').value;
+        var n1_convert = parseFloat(n1);
+        var libras = n1_convert * 0.043;
+        document.getElementById('num2_monedas').value = libras;
+    }
+    function dolares(){
+        var n1 = document.getElementById('num1_monedas').value;
+        var n1_convert = parseFloat(n1);
+        var dolares = n1_convert * 0.055;
+        document.getElementById('num2_monedas').value = dolares;
+    }
+    function euros(){
+        var n1 = document.getElementById('num1_monedas').value;
+        var n1_convert = parseFloat(n1);
+        var euros = n1_convert * 0.051;
+        document.getElementById('num2_monedas').value = euros;
+    }
+    function yenes(){
+        var n1 = document.getElementById('num1_monedas').value;
+        var n1_convert = parseFloat(n1);
+        var yenes = n1_convert * 8.61;
+        document.getElementById('num2_monedas').value = yenes;
+    }
+    </script>
+</body>
+</html>

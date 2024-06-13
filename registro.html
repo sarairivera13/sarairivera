@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="body_registro">
+    <div class="cabecera_registro">
+        <h1>REGISTRO</h1>
+    </div>
+
+    <section class="cuer-regis">
+        <h1>REGISTRO</h1><br>
+        <div class="te-regis">
+            <input type="text" id="nombre" class="datitos"><br><br>
+        </div>
+        <div class="te-regis">
+            <input type="text" id="edad" class="datitos"><br><br>
+        </div>
+        <div class="te-regis">
+            <input type="text" id="direccion" class="datitos"><br><br>
+        </div>
+        <div class="te-regis">
+            <input type="text" id="telefono" class="datitos"><br><br>
+        </div>
+        <div class="brr">
+            <input type="submit" onclick="guardarDatos()" value="enviar">
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <div class= "btn_rr">
+        <div class="brr">
+            <a href="index.html">Regresar</a>
+        </div>
+    </div>
+    <script>
+            function guardarDatos(){
+                const nombrecito = document.getElementById('nombre').value;
+                localStorage.setItem('nombrecito', nombrecito);
+                const apellidito = document.getElementById('edad').value;
+                localStorage.setItem('apedillito', apellidito);
+                const correito = document.getElementById('direccion').value;
+                localStorage.setItem('correito', correito);
+                const numerito = document.getElementById('telefono').value;
+                localStorage.setItem('numerito', numerito);
+                window.location.href = 'index.html';
+            }
+        </script>
+   
+</body>
+</html>
